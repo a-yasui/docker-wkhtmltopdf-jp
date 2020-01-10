@@ -8,7 +8,7 @@ This use IPA-JP Font.
 
 ```shell
 # The example found at https://wkhtmltopdf.org:
-docker run --rm -v $(pwd):/root atyasu/wkhtmltopdf http://google.com google.pdf
+docker run --rm -v $(pwd):/root atyasu/wkhtmltopdf-jp https://google.com/ /root/google.pdf
 ```
 
 # References

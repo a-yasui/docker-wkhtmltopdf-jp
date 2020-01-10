@@ -7,6 +7,8 @@ FROM icalialabs/wkhtmltopdf:alpine
 
 MAINTAINER a-yasui
 
+WORKDIR /root
+
 # IPA font
 RUN cd && wget https://ipafont.ipa.go.jp/IPAfont/IPAfont00303.zip \
     && unzip IPAfont00303.zip \
@@ -15,4 +17,6 @@ RUN cd && wget https://ipafont.ipa.go.jp/IPAfont/IPAfont00303.zip \
     && fc-cache -fv
 
 # 2: Set wkhtmltopdf as the entrypoint:
+COPY alpine-entrypoint.sh /bin/entrypoint.sh
+
 ENTRYPOINT ["/bin/entrypoint.sh"]
