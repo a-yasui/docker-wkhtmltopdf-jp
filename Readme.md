@@ -11,6 +11,12 @@ This use IPA-JP Font.
 docker run --rm -v $(pwd):/root atyasu/wkhtmltopdf-jp https://google.com/ /root/google.pdf
 ```
 
+オプションもりもり
+
+```shell
+docker run -v $(pwd):/root atyasu/wkhtmltopdf-jp -s A6 -O Landscape --custom-header "User-Agent" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.94 Safari/537.36" --viewport-size 1280x1024 https://google.com/ test.pdf
+```
+
 # References
 
 ## Similar projects:
